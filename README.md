@@ -15,18 +15,18 @@ After that, your IDE, when you declare a class Redis will display a hint which m
  * Install [phpredis extension](https://github.com/nicolasff/phpredis)
  * The simpliest way to install and use phpredis_cluster_phpdoc is to use Composer, as there is a [package on Packagist](https://packagist.org/packages/zgb7mtr/phpredis_cluster_phpdoc). Just add this to your project composer.json file :
 
-    {
-        "require": {
+        {    
+        "require": {        
             "zgb7mtr/phpredis_cluster_phpdoc": "*"
-        },
-        "minimum-stability": "dev"
-    }
+        },        
+        "minimum-stability": "dev"        
+        }
 
  * Or direct download [phpredis_cluster_phpdoc](https://github.com/zgb7mtr/phpredis_cluster_phpdoc/tarball/master)
 
 ### Setup in IDE PhpStorm
 
- Menu "File" -> "Settings" -> "PHP" -> _Select path to folder "phpredis_cluster_phpdoc"_
+ Menu "File" -> "Settings" -> "Languages & Frameworks" ->  "PHP" -> "Include Path" ->  _Select path to folder "phpredis_cluster_phpdoc"_
 
 ### Setup in IDE NetBeans
 
