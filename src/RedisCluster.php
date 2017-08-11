@@ -5,7 +5,7 @@
  * Based on the phpredis-phpdoc by Max Kamashev (https://github.com/ukko/phpredis-phpdoc)
  *
  * @author Tommy Zheng <tommy@vlv.pw>
- * @link   https://github.com/zgb7mtr/phpredis-cluster-phpdoc
+ * @link   https://github.com/zgb7mtr/phpredis_cluster_phpdoc
  *
  * @method mixed eval($script, $args = array(), $numKeys = 0)
  *
