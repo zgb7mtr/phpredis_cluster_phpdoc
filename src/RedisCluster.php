@@ -157,7 +157,7 @@ class RedisCluster {
      * @link http://redis.io/commands/mget
      * @example
      * <pre>
-     * $redisCluster->del('x', 'y', 'z', 'h');    // remove x y z
+     * $redisCluster->(('x', 'y', 'z', 'h');    // remove x y z
      * $redisCluster->mset(array('x' => 'a', 'y' => 'b', 'z' => 'c'));
      * $redisCluster->hset('h', 'field', 'value');
      * var_dump($redisCluster->mget(array('x', 'y', 'z', 'h')));
@@ -209,7 +209,7 @@ class RedisCluster {
     /**
      * Remove specified keys.
      *
-     * @param   int | array $key1 An array of keys, or an undefined number of parameters, each a key: key1 key2 key3
+     * @param   string | array $key1 An array of keys, or an undefined number of parameters, each a key: key1 key2 key3
      *                            ... keyN
      * @param   string      $key2 ...
      * @param   string      $key3 ...
