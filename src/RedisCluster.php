@@ -3166,7 +3166,7 @@ class RedisCluster {
      *
      * @param String | array $nodeParams key or [host,port]
      *
-     * @return  string STRING: +PONG on success. Throws a RedisException object on connectivity error, as described
+     * @return  string STRING: +PONG on success. Throws a RedisClusterException object on connectivity error, as described
      *                 above.
      * @link    http://redis.io/commands/ping
      */
@@ -3468,3 +3468,6 @@ class RedisCluster {
     public function geoRadiusByMember($key, $member, $radius, $radiusUnit, array $options) { }
 
 }
+
+
+class RedisClusterException extends Exception {}
