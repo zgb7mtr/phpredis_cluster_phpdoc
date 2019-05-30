@@ -69,6 +69,7 @@ class RedisCluster {
      * @param float         $timeout
      * @param float         $readTimeout
      * @param bool          $persistent
+     * @param string | null $auth
      * @throws RedisClusterException
      *
      * @example
@@ -84,6 +85,7 @@ class RedisCluster {
      * // redis.clusters.seeds = "mycluster[]=localhost:7000&test[]=localhost:7001"
      * // redis.clusters.timeout = "mycluster=5"
      * // redis.clusters.read_timeout = "mycluster=10"
+     * // redis.clusters.auth = "mycluster=password"
      *
      * //Then, this cluster can be loaded by doing the following
      *
@@ -91,7 +93,7 @@ class RedisCluster {
      * $redisClusterDev = new RedisCluster('test');
      * </pre>
      */
-    public function __construct($name, $seeds, $timeout = null, $readTimeout = null, $persistent = false) { }
+    public function __construct($name, $seeds, $timeout = null, $readTimeout = null, $persistent = false, $auth = null) { }
 
     /**
      * Disconnects from the Redis instance, except when pconnect is used.
