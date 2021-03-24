@@ -96,7 +96,7 @@ class RedisCluster {
     public function __construct($name, $seeds, $timeout = null, $readTimeout = null, $persistent = false, $auth = null) { }
 
     /**
-     * Disconnects from the Redis instance, except when pconnect is used.
+     * Disconnects from the RedisCluster instance, except when pconnect is used.
      */
     public function close() { }
 
@@ -1206,7 +1206,7 @@ class RedisCluster {
 
     /**
      * Returns the remaining time to live of a key that has a timeout.
-     * This introspection capability allows a Redis client to check how many seconds a given key will continue to be
+     * This introspection capability allows a client to check how many seconds a given key will continue to be
      * part of the dataset. In Redis 2.6 or older the command returns -1 if the key does not exist or if the key exist
      * but has no associated expire. Starting with Redis 2.8 the return value in case of error changed: Returns -2 if
      * the key does not exist. Returns -1 if the key exists but has no associated expire.
@@ -2905,7 +2905,7 @@ class RedisCluster {
      *            a RedisCluster::PIPELINE block is simply transmitted faster to the server, but without any guarantee
      *            of atomicity. discard cancels a transaction.
      *
-     * @return Redis returns the Redis instance and enters multi-mode.
+     * @return RedisCluster returns the RedisCluster instance and enters multi-mode.
      * Once in multi-mode, all subsequent method calls return the same object until exec() is called.
      * @link    https://redis.io/commands/multi
      * @example
