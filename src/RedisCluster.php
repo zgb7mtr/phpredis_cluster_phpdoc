@@ -64,12 +64,12 @@ class RedisCluster {
     /**
      * Creates a Redis Cluster client
      *
-     * @param string | null mixed $name
-     * @param array         $seeds
-     * @param float         $timeout
-     * @param float         $readTimeout
-     * @param bool          $persistent
-     * @param string | null $auth
+     * @param string | null mixed   $name
+     * @param array                 $seeds
+     * @param float                 $timeout
+     * @param float                 $readTimeout
+     * @param bool                  $persistent
+     * @param string | array | null $auth
      * @throws RedisClusterException
      *
      * @example
@@ -85,7 +85,7 @@ class RedisCluster {
      * // redis.clusters.seeds = "mycluster[]=localhost:7000&test[]=localhost:7001"
      * // redis.clusters.timeout = "mycluster=5"
      * // redis.clusters.read_timeout = "mycluster=10"
-     * // redis.clusters.auth = "mycluster=password"
+     * // redis.clusters.auth = "mycluster=password" OR ['user' => 'foo', 'pass' => 'bar] as example
      *
      * //Then, this cluster can be loaded by doing the following
      *
