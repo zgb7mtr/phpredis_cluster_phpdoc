@@ -70,6 +70,7 @@ class RedisCluster {
      * @param float                 $readTimeout
      * @param bool                  $persistent
      * @param string | array | null $auth
+     * @param array | null          $context
      * @throws RedisClusterException
      *
      * @example
@@ -91,9 +92,16 @@ class RedisCluster {
      *
      * $redisClusterPro = new RedisCluster('mycluster');
      * $redisClusterDev = new RedisCluster('test');
+     * 
+     * // Connect with cluster using password.
+     * $redisCluster = new RedisCluster(NULL, Array("host:7000", "host:7001"), 1.5, 1.5, true, "password");
+     *
+     * // Connect with cluster using SSL/TLS
+     * last argument is an array with [SSL context](https://www.php.net/manual/en/context.ssl.php) options
+     * $redisCluster = new RedisCluster(NULL, Array("host:7000", "host:7001"), 1.5, 1.5, true, NULL, Array("verify_peer" => false));
      * </pre>
      */
-    public function __construct($name, $seeds, $timeout = null, $readTimeout = null, $persistent = false, $auth = null) { }
+    public function __construct($name, $seeds, $timeout = null, $readTimeout = null, $persistent = false, $auth = null, $context = null) { }
 
     /**
      * Disconnects from the RedisCluster instance, except when pconnect is used.
